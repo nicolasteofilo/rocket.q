@@ -10,6 +10,7 @@
         <!-- CSS -->
         <link rel="stylesheet" href="styles/global.css">
         <link rel="stylesheet" href="styles/room.css">
+        <link rel="stylesheet" href="/styles/modal.css">
 
         <!-- FONTS -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -57,7 +58,7 @@
                         <div class="question-wrapper">
                             <div class="question-content">
                                 <div class="user">
-                                    <img src="assets/avatar.svg" alt="Avatar">
+                                    <img src="assets/user.svg" alt="user">
                                 </div>
                                 <div class="question">
                                     <p>Qual a diferença entre const, var e let no JavaScript?</p>
@@ -72,14 +73,42 @@
                                     <img src="assets/trash.svg" alt="Excluir">
                                     Excluir
                                 </a>
+
+                                <div class="actions">
+                                    <a href="#" class="delete">
+                                        <img src="assets/trash.svg" alt="Excluir">
+                                        Excluir
+                                    </a>
+                                </div>
                             </div>
+    
                         </div>
+                    </section>
+                </main>
+            </div>
+    
+            <!--Modal-->
+    
+            <div class="modal-wrapper">
+                <div class="modal">
+                    <h2>Excluir</h2>
 
+        <div class="modal-wrapper">
+            <div class="modal">
+                <h2>Excluir Pergunta</h2>
+                <p>Tem certeza que você deseja excluir está pergunta?</p>
+
+                <form action="">
+                    <label class="sr-only" for-id="password">Digite sua senha adm</label>
+                    <input id="password" type="password" nmae="password" placeholder="Digite sua senha adm">
+                
+                    <div class="buttons">
+                        <div class="button grey">Cancelar</div>
+                        <button class="red">Sim, marcar como lido</button>
                     </div>
-                </section>
-
-            </main>
-
+                </form>
+            </div>
         </div>
+
     </body>
 </html>
