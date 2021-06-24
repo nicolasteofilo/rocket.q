@@ -1,0 +1,24 @@
+{
+  "name": "rocket.q",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicolasteofilo/rocket.q.git"
+  },
+  "keywords": [],
+  "author": "Nicolas Teófilo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nicolasteofilo/rocket.q/issues"
+  },
+  "homepage": "https://github.com/nicolasteofilo/rocket.q#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
+}
