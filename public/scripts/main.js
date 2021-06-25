@@ -1,4 +1,3 @@
-
 import Modal from './modal.js'
 
 const modal = Modal()
@@ -27,6 +26,12 @@ deleteButton.forEach(button => {
 function handleClick(event, check = true) {
     event.preventDefault()
     const text = check ? "Marcar como lida" : "Excluir"
+    const slug = check ? "check" : "delete"
+
+    const roomId = document.querySelector("#room-id").dataset.id
+
+    const form = document.querySelector(".modal form")
+    form.setAttribute("action", `/room/${roomId}/:question/${slug}`)
     
 
     modalTitle.innerHTML = `${text} esta pergunta`;
