@@ -1,13 +1,14 @@
 const express = require('express')
+const QuestionController = require('./controllers/QuestionsController')
 
-const routes = express.Router() 
+const route = express.Router()
 
-routes.get('/', (req, res) => res.render("index"))
-routes.get('/room', (req, res) => res.render("room"))
-routes.get('/create-pass', (req, res) => res.render("create-pass"))
+route.get('/', (req, res) => res.render("index", {page: 'enter-room'}))
+route.get('/create-pass', (req,res) => res.render("index", {page: 'create-pass'}))
 
+route.get('/room/:room', (req, res) => res.render("room"))
 
-// Format that the form within the modal has to pass the information
-// routes.post('/room/:room/:question/:action')
+// Formato que o formulario de dentro da modal tem que passar a informação
+route.post('/question/:room/:question/:action', QuestionController.index)
 
-module.exports = routes
+module.exports = route
